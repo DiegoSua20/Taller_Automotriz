@@ -19,6 +19,7 @@ services:
       dockerfile: ../docker/backend/Dockerfile
     ports:
       - "3000:3000"
+      - "5555:5555"
     volumes:
       - ./backend:/app
       - /app/node_modules
@@ -27,6 +28,8 @@ services:
     env_file:
       - ./backend/.env
     command: npm run dev
+
+    
 
 volumes:
   postgres_data:
